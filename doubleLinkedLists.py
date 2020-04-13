@@ -10,27 +10,7 @@ class DoublyLinkedList:
         self.head = None
         self.tail = None
 
-    def printList(self):
-        arr = []
-        if self.head == None:
-            return
-        else:
-            arr.append(self.head)
-            if self.head.next != None:
-                self.printListHelper(arr, self.head.next)
-            else:
-                return self.head.value
-
-    def printListHelper(self, arr, nextNode):
-        if nextNode != None:
-            arr.append(nextNode)
-            self.printListHelper(arr, nextNode.next)
-        for i in arr:
-            print(i.value)
-        return 
-
-
-
+  
     def setHead(self, node):
         if self.head == None:
             self.head = node
